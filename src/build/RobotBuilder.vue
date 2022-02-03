@@ -2,19 +2,34 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to Cart</button>
     <div class="top-row">
-      <div class="robot-name">
+      <!-- <div class="robot-name">
         {{selectedRobot.head.title}}
         <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
-      </div>
-      <parts-selector />
+      </div> -->
+      <parts-selector
+        :parts="availableParts.heads"
+        position="top"
+      />
     </div>
     <div class="middle-row">
-      <parts-selector />
-      <parts-selector />
-      <parts-selector />
+      <parts-selector
+        :parts="availableParts.arms"
+        position="left"
+      />
+      <parts-selector
+        :parts="availableParts.torsos"
+        position="center"
+      />
+      <parts-selector
+        :parts="availableParts.arms"
+        position="right"
+      />
     </div>
     <div class="bottom-row">
-      <parts-selector />
+      <parts-selector
+        :parts="availableParts.bases"
+        positon="bottom"
+      />
     </div>
     <div>
       <h1>Cart</h1>
