@@ -10,17 +10,18 @@
     </nav>
   </header>
   <main>
-    <home-page msg="Welcome to Your Vue.js App"/>
+    <robot-builder />
   </main>
 </template>
 
 <script>
-import HomePage from './home/HomePage.vue';
+// import HomePage from './home/HomePage.vue';
+import RobotBuilder from './build/RobotBuilder.vue';
 
 export default {
   name: 'App',
   components: {
-    HomePage,
+    RobotBuilder,
   },
 };
 </script>
