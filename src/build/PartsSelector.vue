@@ -1,6 +1,6 @@
 <template>
   <div class="part" :class="position">
-    <div>Username: {{userName}}</div>
+    <div>Username: {{user.userName}}</div>
     <img :src="selectedPart.src" title="arm" />
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
@@ -42,7 +42,7 @@ export default {
   data() {
     return { selectedPartIndex: 0 };
   },
-  inject: ['userName'],
+  inject: ['user'],
   computed: {
     selectedPart() {
       return this.parts[this.selectedPartIndex];

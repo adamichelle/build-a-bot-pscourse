@@ -6,6 +6,10 @@
           <img class="logo" src="./assets/build-a-bot-logo.png" alt="Build a bot logo">
           Build a bot
         </li>
+        <li>
+          User: {{user.userName}}
+          <button @click="changeUserName()">Change Username</button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -25,13 +29,18 @@ export default {
   },
   data() {
     return {
-      userName: 'Jim',
+      user: { userName: 'Jim' },
     };
   },
   provide() {
     return {
-      userName: this.userName,
+      user: this.user,
     };
+  },
+  methods: {
+    changeUserName() {
+      this.user.userName = 'Fred';
+    },
   },
 };
 </script>
