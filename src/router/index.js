@@ -5,6 +5,7 @@ import {
 
 import HomePage from '../home/HomePage.vue';
 import RobotBuilder from '../build/RobotBuilder.vue';
+import PartsInfo from '../parts/PartsInfo.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -18,6 +19,11 @@ export default createRouter({
       path: '/build',
       name: 'Build',
       component: RobotBuilder,
+    },
+    {
+      path: '/parts',
+      name: 'Parts',
+      component: PartsInfo,
     },
   ],
 });
