@@ -23,6 +23,16 @@ export default {
   components: {
     RobotBuilder,
   },
+  data() {
+    return {
+      userName: 'Jim',
+    };
+  },
+  provide() {
+    return {
+      userName: this.userName,
+    };
+  },
 };
 </script>
 
