@@ -1,9 +1,17 @@
 <template>
   <div class="part" :class="position">
-    <img :src="selectedPart.src" title="arm"/>
+    <img :src="selectedPart.src" title="arm" @click="showPartInfo = !showPartInfo"/>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
     <span class="sale" v-show="selectedPart.onSale">Sale!</span>
+
+    <teleport to="#partInfo" v-if="showPartInfo">
+      <div>
+        <div>{{selectedPart.cost}} {{selectedPart.type}} {{selectedPart.cost}}</div>
+        <div>{{selectedPart.description}}</div>
+        <hr />
+      </div>
+    </teleport>
   </div>
 </template>
 
@@ -39,7 +47,7 @@ export default {
     this.emitSelectedPart();
   },
   data() {
-    return { selectedPartIndex: 0 };
+    return { selectedPartIndex: 0, showPartInfo: false };
   },
   computed: {
     selectedPart() {
