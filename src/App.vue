@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     Root Foo: {{rootFoo}}
     Robots Foo: {{robotsFoo}}
     Users Foo: {{usersFoo}}
@@ -7,7 +7,7 @@
     <br />
     Root Getter Foo: {{rootGetterFoo}}
     Robots Getter Foo: {{robotsGetterFoo}}
-  </div>
+  </div> -->
   <header>
     <nav>
       <ul>
