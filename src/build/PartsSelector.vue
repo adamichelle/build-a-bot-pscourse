@@ -13,7 +13,7 @@
     <button @click="selectNextPart()" class="next-selector"></button>
     <span
       class="sale"
-      v-pin="{ bottom: '5px', right: '5px' }"
+      v-pin="{ bottom: '5px', right: '55px' }"
       v-show="selectedPart.onSale"
     >
       Sale!
