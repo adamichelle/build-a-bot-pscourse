@@ -42,6 +42,7 @@
             {{robot.head.title}}
           </td>
           <td class="cost">
+            <!-- {{robot.cost | currency}}  Vue 2 syntax-->
             {{robot.cost}}
           </td>
         </tr>
@@ -51,8 +52,13 @@
 </template>
 
 <script>
+import currencyFilter from '../shared/currency-filter';
+
 export default {
   name: 'ShoppingCart',
+  filters: {
+    currency: currencyFilter,
+  },
   computed: {
     cart() {
       return this.$store.state.robots.cart;
