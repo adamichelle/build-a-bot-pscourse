@@ -1,4 +1,14 @@
 <template>
+  <div>
+    Root Foo: {{rootFoo}}
+    Robots Foo: {{robotsFoo}}
+    Users Foo: {{usersFoo}}
+
+    <br />
+    Root Getter Foo: {{rootGetterFoo}}
+    Robots Getter Foo: {{robotsGetterFoo}}
+    Users Getter Foo: {{usersGetterFoo}}
+  </div>
   <header>
     <nav>
       <ul>
@@ -39,6 +49,24 @@ export default {
   computed: {
     cart() {
       return this.$store.state.robots.cart;
+    },
+    rootFoo() {
+      return this.$store.state.foo;
+    },
+    robotsFoo() {
+      return this.$store.state.robots.foo;
+    },
+    usersFoo() {
+      return this.$store.state.users.foo;
+    },
+    rootGetterFoo() {
+      return this.$store.getters.foo;
+    },
+    robotsGetterFoo() {
+      return this.$store.getters['robots/foo'];
+    },
+    usersGetterFoo() {
+      return this.$store.getters['users/foo'];
     },
   },
 };
