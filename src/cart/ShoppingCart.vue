@@ -42,7 +42,7 @@
             {{robot.head.title}}
           </td>
           <td class="cost">
-            <!-- {{robot.cost | currency}}  Vue 2 syntax-->
+            <!-- {{robot.cost | currency($)}}  Vue 2 syntax-->
             {{robot.cost}}
           </td>
         </tr>
