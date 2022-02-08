@@ -18,7 +18,7 @@
             {{robot.head.title}}
           </td>
           <td class="cost">
-            {{robot.cost}}
+            {{currency(robot.cost, '$')}}
           </td>
         </tr>
       </tbody>
@@ -43,7 +43,7 @@
           </td>
           <td class="cost">
             <!-- {{robot.cost | currency($)}}  Vue 2 syntax-->
-            {{robot.cost}}
+            {{currency(robot.cost, '$')}}
           </td>
         </tr>
       </tbody>
@@ -56,7 +56,7 @@ import currencyFilter from '../shared/currency-filter';
 
 export default {
   name: 'ShoppingCart',
-  filters: {
+  methods: {
     currency: currencyFilter,
   },
   computed: {
